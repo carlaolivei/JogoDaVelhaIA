@@ -45,7 +45,7 @@ def inputPlayerLetter():
 	letter = ''
 	while not(letter == 'X' or letter == 'O'):
 		print('Voce quer ser X ou O?')
-		letter = raw_input().upper()
+		letter = input().upper()
 		if(letter != 'X' and letter != 'O'):
 			print"Entre apenas com a letra X(xis) se voce quer ser X ou com a letra O(oh) se voce quer ser O!"
 
@@ -89,7 +89,7 @@ def getPlayerMove(board):
 	move = ''
 	while move not in '1 2 3 4 5 6 7 8 9'.split() or not isSpaceFree(board, int(move)):
 		print('Qual eh o seu proximo movimento? (1-9)')
-		move = raw_input();
+		move = input();
 		if(move not in '1 2 3 4 5 6 7 8 9'):
 			print "MOVIMENTO INVALIDO! INSIRA UM NUMERO ENTRE 1 E 9!"
 		
@@ -305,7 +305,7 @@ while jogar:
 	letterNew = ''
 	while not(letterNew == 'S' or letterNew == 'N'):
 		print"Voce quer jogar novamente? Digite S(para sim) ou N(para nao)"
-		letterNew = raw_input().upper()
+		letterNew = input().upper()
 		if (letterNew != 'S' and letterNew != 'N'):
 			print"Entrada invalida! Digite S(para sim) ou N(para nao)!"
 		if(letterNew == 'N'):
